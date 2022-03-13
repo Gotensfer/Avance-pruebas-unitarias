@@ -3,34 +3,46 @@ using System.Collections.Generic;
 
 namespace AvancePruebasUnitarias
 {
-	public class Tower : Levels
+	public class Tower
 	{
-		List<Levels> towerPlayer = new List<Levels>(), towerEnemy = new List<Levels>();
+		List<Levels> tower = new List<Levels>();
 		Random rnd = new Random();
-		int amountLevels, positionPlayer;
+		int amountLevels, positionPlayer, size;
 
-		public Tower(int amount)
-		{
-			amountLevels = rnd.Next(1, amount);
-			for (int i = 0; i < amountLevels; i++)
-			{
-				towerPlayer.Add(null);
-			}
+		public Tower(int size)
+		{			
+			GenerateTower(size);
 		}
 
-		void GenerateTower()
+		public Tower()
+		{
+			GenerateTower(GenerateRandomSize());
+		}
+
+		int GenerateRandomSize()
         {
-			if(amountLevels <= 0) throw new Exception("Out of range");
+			return (rnd.Next(1, 6));
+		}
+
+		void GenerateTower(int size)
+        {
+						
+            for (int i = 0; i < size; i++)
+            {
+				tower.Add(null);
+            }
+
+			if(size <= 0) throw new Exception("Out of range");
         }
 
-		void AssignPlayer()
+		/*void AssignPlayer()
         {
 			positionPlayer = rnd.Next(0, towerPlayer.Count);
             for (int i = 0; i < towerPlayer.Count; i++)
             {
 				if (i == positionPlayer) towerPlayer[i].GeneratePlayer();
             }
-        }
+        }*/
 
 
 	}
