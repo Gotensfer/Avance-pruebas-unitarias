@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System;
 
 namespace AvancePruebasUnitarias
 {
@@ -8,7 +10,30 @@ namespace AvancePruebasUnitarias
         [TestMethod]
         public void CreatedTower_HasAtLeastOneLevel()
         {
+            //Create instance of tower with n levels
 
+            int[] correctCases_OneOrMoreLevels = { 1, 8 };
+            int[] failCases_LessThanOneLevels = { 0, -1, -20 };
+
+            for (int i = 0; i < correctCases_OneOrMoreLevels.Length; i++)
+            {
+                Tower tower = new Tower(/*correctCases_OneOrMoreLevels[i]*/);
+
+                Assert.IsTrue(0 == 0 /*tower.levels?.size/count/lenght >= 1*/, "La torre tiene menos de 1 nivel al ser generada");
+            }
+
+            for (int i = 0; i < failCases_LessThanOneLevels.Length; i++)
+            {
+                try
+                {
+                    Tower tower = new Tower(/*failCases_LessThanOneLevels[i]*/);
+                    Assert.Fail();
+                }
+                catch (Exception)
+                {                    
+                    return;
+                }
+            }
         }
 
         [TestMethod]
