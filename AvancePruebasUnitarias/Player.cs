@@ -5,6 +5,7 @@ namespace AvancePruebasUnitarias
 	public class Player : Character
 	{
 		Random rnd = new Random();
+		public int life = 3;
 
 		public Player(int force)
 		{
