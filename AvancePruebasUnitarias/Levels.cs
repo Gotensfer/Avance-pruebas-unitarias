@@ -20,6 +20,7 @@ namespace AvancePruebasUnitarias
 		public void GeneratePlayer()
 		{
 			player = new Player();
+			if(player.str < 1) throw new Exception("Out of range");
 		}
 
 		public void GenerateObstacle()

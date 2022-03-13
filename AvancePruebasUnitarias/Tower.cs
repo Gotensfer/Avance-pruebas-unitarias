@@ -20,14 +20,12 @@ namespace AvancePruebasUnitarias
 
 		public void GenerateTower(int size)
         {
-						
-            for (int i = 0; i < size; i++)
-            {
+			if (size <= 0) throw new Exception("Out of range");
+			for (int i = 0; i < size + 1; i++)
+            {				
 				tower.Add(null);
-            }
-
-			if(size <= 0) throw new Exception("Out of range");
-        }
+            }			
+		}
 
 	}
 }
