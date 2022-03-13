@@ -5717,19 +5717,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JUAN FERNANDOH\\.nuget\\packages\\": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JUAN FERNANDOH\\Desktop\\Scripting\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj",
+      "projectUniqueName": "E:\\entregas\\Semestre 5\\Scripting\\Proyecto\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj",
       "projectName": "AvancePruebasUnitarias",
-      "projectPath": "C:\\Users\\JUAN FERNANDOH\\Desktop\\Scripting\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj",
-      "packagesPath": "C:\\Users\\JUAN FERNANDOH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JUAN FERNANDOH\\Desktop\\Scripting\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\obj\\",
+      "projectPath": "E:\\entregas\\Semestre 5\\Scripting\\Proyecto\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "E:\\entregas\\Semestre 5\\Scripting\\Proyecto\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JUAN FERNANDOH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
