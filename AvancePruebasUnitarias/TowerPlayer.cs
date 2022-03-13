@@ -4,12 +4,12 @@ namespace AvancePruebasUnitarias
 {
 	public class TowerPlayer : Tower
 	{
-		int positionPlayer;
+		public int positionPlayer;
 		Random rnd = new Random();
 
 		public TowerPlayer(int size)
 		{
-			if(size <= 0) throw new Exception("Out of range");
+
 			GenerateTower(size);
 			AssignPlayer();
 		}
@@ -20,7 +20,7 @@ namespace AvancePruebasUnitarias
 			AssignPlayer();
 		}
 
-		void AssignPlayer()												//Genera el jugador
+		public void AssignPlayer()												//Genera el jugador
 		{
 			positionPlayer = rnd.Next(0, tower.Count + 1);
 			tower[positionPlayer].GeneratePlayer();
