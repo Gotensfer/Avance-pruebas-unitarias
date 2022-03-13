@@ -5,9 +5,8 @@ namespace AvancePruebasUnitarias
 {
 	public class Tower
 	{
-		List<Levels> tower = new List<Levels>();
-		Random rnd = new Random();
-		int amountLevels, positionPlayer, size;
+		public List<Levels> tower = new List<Levels>();
+		Random rnd = new Random();		
 
 		public Tower(int size)
 		{			
@@ -19,12 +18,12 @@ namespace AvancePruebasUnitarias
 			GenerateTower(GenerateRandomSize());
 		}
 
-		int GenerateRandomSize()
+		public int GenerateRandomSize()
         {
 			return (rnd.Next(1, 6));
 		}
 
-		void GenerateTower(int size)
+		public void GenerateTower(int size)
         {
 						
             for (int i = 0; i < size; i++)
@@ -34,16 +33,6 @@ namespace AvancePruebasUnitarias
 
 			if(size <= 0) throw new Exception("Out of range");
         }
-
-		/*void AssignPlayer()
-        {
-			positionPlayer = rnd.Next(0, towerPlayer.Count);
-            for (int i = 0; i < towerPlayer.Count; i++)
-            {
-				if (i == positionPlayer) towerPlayer[i].GeneratePlayer();
-            }
-        }*/
-
 
 	}
 }

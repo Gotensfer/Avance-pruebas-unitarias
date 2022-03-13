@@ -7,9 +7,4 @@ public class Player : Character
 	{
 		strg = rnd.Next(1, 1000);
 	}
-
-	void Combat(int streaght, int result)
-    {
-
-    }
 }
