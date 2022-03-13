@@ -5,7 +5,7 @@ namespace AvancePruebasUnitarias
 {
 	public class Tower
 	{
-		List<Levels> tower = new List<Levels>();
+		public List<Levels> tower = new List<Levels>();
 		Random rnd = new Random();
 		int amountLevels, positionPlayer, size;
 

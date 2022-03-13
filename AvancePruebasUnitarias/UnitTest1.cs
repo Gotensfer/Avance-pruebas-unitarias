@@ -17,9 +17,9 @@ namespace AvancePruebasUnitarias
 
             for (int i = 0; i < correctCases_OneOrMoreLevels.Length; i++)
             {
-                Tower tower = new Tower(/*correctCases_OneOrMoreLevels[i]*/);
+                Tower tower = new Tower(correctCases_OneOrMoreLevels[i]);
 
-                Assert.IsTrue(0 == 0 /*tower.levels?.size/count/lenght >= 1*/, "La torre tiene menos de 1 nivel al ser generada");
+                Assert.IsTrue(tower.tower.Count >= 1, "La torre tiene menos de 1 nivel al ser generada");
             }
 
             for (int i = 0; i < failCases_LessThanOneLevels.Length; i++)
