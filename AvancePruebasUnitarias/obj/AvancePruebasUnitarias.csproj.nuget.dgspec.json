@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\entregas\\Semestre 5\\Scripting\\Proyecto\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj": {}
+    "C:\\Users\\JUAN FERNANDOH\\Desktop\\Scripting\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj": {}
   },
   "projects": {
-    "E:\\entregas\\Semestre 5\\Scripting\\Proyecto\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj": {
+    "C:\\Users\\JUAN FERNANDOH\\Desktop\\Scripting\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\entregas\\Semestre 5\\Scripting\\Proyecto\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN FERNANDOH\\Desktop\\Scripting\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj",
         "projectName": "AvancePruebasUnitarias",
-        "projectPath": "E:\\entregas\\Semestre 5\\Scripting\\Proyecto\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "E:\\entregas\\Semestre 5\\Scripting\\Proyecto\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\obj\\",
+        "projectPath": "C:\\Users\\JUAN FERNANDOH\\Desktop\\Scripting\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\AvancePruebasUnitarias.csproj",
+        "packagesPath": "C:\\Users\\JUAN FERNANDOH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN FERNANDOH\\Desktop\\Scripting\\Avance-pruebas-unitarias\\AvancePruebasUnitarias\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JUAN FERNANDOH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

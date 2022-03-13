@@ -18,7 +18,7 @@ namespace AvancePruebasUnitarias
             //efectivamente al menos un nivel
             for (int i = 0; i < correctCases_SizeOneOrMoreLevels.Length; i++)
             {
-                Tower tower = new Tower(correctCases_SizeOneOrMoreLevels[i]);
+                TowerPlayer tower = new TowerPlayer(correctCases_SizeOneOrMoreLevels[i]);
 
                 Assert.IsTrue(tower.tower.Count >= 1, "La torre tiene menos de 1 nivel al ser generada");
             }
@@ -27,7 +27,7 @@ namespace AvancePruebasUnitarias
             //no debe ser posible
             for (int i = 0; i < failCases_SizeLessThanOneLevels.Length; i++)
             {
-                Assert.ThrowsException<Exception>(() => new Tower(failCases_SizeLessThanOneLevels[i]), "Se esperaba que saliera una excepción");
+                Assert.ThrowsException<Exception>(() => new TowerPlayer(failCases_SizeLessThanOneLevels[i]), "Se esperaba que saliera una excepción");
             }
         }
 
@@ -44,7 +44,7 @@ namespace AvancePruebasUnitarias
             {
                 Player player = new Player(correctCases_PlayerCharacterValueOfAtLeastOne[i]);
 
-                Assert.IsTrue(  >= 1, "El personaje tiene menos de 1 de valor al ser generado");
+                Assert.IsTrue( player.strg >= 1, "El personaje tiene menos de 1 de valor al ser generado");
             }
 
             //Verificar casos de crear el personaje del jugador con un valor inferior a 1 lo cual
