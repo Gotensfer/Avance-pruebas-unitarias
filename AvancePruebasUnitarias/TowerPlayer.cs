@@ -6,7 +6,6 @@ namespace AvancePruebasUnitarias
 	{
 		int positionPlayer;
 		Random rnd = new Random();
-		Player player = new Player();
 
 		public TowerPlayer(int size)
 		{
@@ -24,7 +23,7 @@ namespace AvancePruebasUnitarias
 		void AssignPlayer()												//Genera el jugador
 		{
 			positionPlayer = rnd.Next(0, tower.Count + 1);
-			tower[positionPlayer].player = player;
+			tower[positionPlayer].GeneratePlayer();
 
 		}
 	}
