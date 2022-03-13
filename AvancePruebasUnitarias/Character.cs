@@ -2,6 +2,5 @@
 
 public class Character
 {
-	public int strg;
-
+	public int strg = 1;
 }
