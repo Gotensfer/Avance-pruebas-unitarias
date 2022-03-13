@@ -20,7 +20,9 @@ namespace AvancePruebasUnitarias
 
 		public void GenetareStrg(int force)
         {
-			str = rnd.Next(1, force);
+			if (force < 0) throw new Exception("Out of range");
+			else str = rnd.Next(1, force + 1);
+
 		}
 	}
 }
