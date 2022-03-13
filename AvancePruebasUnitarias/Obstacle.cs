@@ -13,7 +13,7 @@ namespace AvancePruebasUnitarias
 		public Obstacle()
 		{
 			GenetareStrg(GenerateRandomSize());
-			if (strg <= 0) throw new Exception("Out of range");
+			if (str <= 0) throw new Exception("Out of range");
 		}
 
 		public int GenerateRandomSize()
@@ -23,7 +23,7 @@ namespace AvancePruebasUnitarias
 
 		public void GenetareStrg(int force)
 		{
-			strg = rnd.Next(1, force);
+			str = rnd.Next(1, force);
 		}
 	}
 }

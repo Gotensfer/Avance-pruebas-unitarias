@@ -19,12 +19,12 @@ namespace AvancePruebasUnitarias
 				if(obs == 0)
                 {
 					tower[i].GenerateEnemy();
-					tower[i].enemy.strg += i;
+					tower[i].enemy.str += i;
 				}
                 else
                 {
 					tower[i].GenerateObstacle();
-					tower[i].obs.strg += i;
+					tower[i].obs.str += i;
 				}
 				
             }

@@ -2,5 +2,5 @@
 
 public class Character
 {
-	public int strg = 1;
+	public int str = 1;
 }

@@ -44,7 +44,7 @@ namespace AvancePruebasUnitarias
             {
                 Player player = new Player(correctCases_PlayerCharacterValueOfAtLeastOne[i]);
 
-                Assert.IsTrue( player.strg >= 1, "El personaje tiene menos de 1 de valor al ser generado");
+                Assert.IsTrue( player.str >= 1, "El personaje tiene menos de 1 de valor al ser generado");
             }
 
             //Verificar casos de crear el personaje del jugador con un valor inferior a 1 lo cual

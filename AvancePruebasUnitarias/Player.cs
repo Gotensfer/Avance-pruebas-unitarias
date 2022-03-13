@@ -13,13 +13,13 @@ namespace AvancePruebasUnitarias
 		}
 		public Player()
 		{
-			strg = rnd.Next(1, 6);
-			if (strg <= 0) throw new Exception("Out of range");
+			str = rnd.Next(1, 6);
+			if (str <= 0) throw new Exception("Out of range");
 		}
 
 		public void GenetareStrg(int force)
         {
-			strg = rnd.Next(1, force);
+			str = rnd.Next(1, force);
 		}
 	}
 }

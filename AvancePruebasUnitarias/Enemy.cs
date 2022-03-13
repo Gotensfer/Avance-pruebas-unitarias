@@ -6,6 +6,6 @@ public class Enemy: Character
 	public Enemy()
 	{
 
-		strg = rnd.Next(1, 1000);
+		str = rnd.Next(1, 1000);
 	}
 }
