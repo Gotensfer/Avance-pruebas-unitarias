@@ -6,6 +6,12 @@ namespace AvancePruebasUnitarias
 	{
 		int positionPlayer;
 		Random rnd = new Random();
+
+		public TowerPlayer(int size)
+		{
+			GenerateTower(size);
+		}
+
 		public TowerPlayer()
 		{
 			GenerateTower(GenerateRandomSize());

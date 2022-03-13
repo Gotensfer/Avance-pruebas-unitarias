@@ -6,6 +6,12 @@ namespace AvancePruebasUnitarias
 	{
 		Random rnd = new Random();
 		int obs;
+
+		public TowerEnemy(int size)
+		{
+			GenerateTower(size);
+		}
+
 		public TowerEnemy()
 		{
 			GenerateTower(GenerateRandomSize());
