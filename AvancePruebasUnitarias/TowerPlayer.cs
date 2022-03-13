@@ -22,7 +22,7 @@ namespace AvancePruebasUnitarias
 
 		public void AssignPlayer()												//Genera el jugador
 		{
-			positionPlayer = rnd.Next(0, tower.Count + 1);
+			positionPlayer = rnd.Next(0, tower.Count);
 			tower[positionPlayer].GeneratePlayer();
 
 		}
