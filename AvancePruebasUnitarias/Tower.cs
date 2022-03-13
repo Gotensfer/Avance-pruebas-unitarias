@@ -8,12 +8,6 @@ namespace AvancePruebasUnitarias
 		public List<Levels> tower = new List<Levels>();
 		Random rnd = new Random();		
 
-
-		public Tower(int size)
-		{			
-			GenerateTower(size);
-		}
-
 		public Tower()
 		{
 			GenerateTower(GenerateRandomSize());
