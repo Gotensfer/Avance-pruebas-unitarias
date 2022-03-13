@@ -14,6 +14,7 @@ namespace AvancePruebasUnitarias
             for (int i = 0; i < tower.Count; i++)
             {
 				tower[i].GenerateEnemy();
+				tower[i].enemy.strg += i;
             }
         }
 	}

@@ -2,7 +2,7 @@
 
 public class Levels
 {
-	Enemy enemy;
+	public Enemy enemy;
 	public Player player;
 	public Levels()
 	{
