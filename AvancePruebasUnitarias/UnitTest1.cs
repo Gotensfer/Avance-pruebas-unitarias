@@ -58,7 +58,18 @@ namespace AvancePruebasUnitarias
         [TestMethod]
         public void PlayerCharacter_IsCurrentlyIn_ALevelOfPlayerTower()
         {
-            Assert.IsTrue(0 == 1);
+            TowerPlayer pTower = new TowerPlayer();
+
+            //Se recorren todas las posiciones de la torre del jugador
+            //en busca de instancias del jugador (O sea que existe en una determinada posicion i en la torre)
+            int playerAppeareancesInTower = 0;
+            for (int i = 0; i < pTower.tower.Count; i++)
+            {
+                if (pTower.tower[i].player != null) playerAppeareancesInTower++;
+            }
+
+            if (playerAppeareancesInTower == 0) Assert.Fail("El jugador no se encuentra en la torre");
+            else if (playerAppeareancesInTower > 1) Assert.Fail("El jugador se encuentra en más de una posición en la torre simultáneamente");
         }
 
         [TestMethod]
