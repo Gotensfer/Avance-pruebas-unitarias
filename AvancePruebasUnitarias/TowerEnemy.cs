@@ -10,11 +10,13 @@ namespace AvancePruebasUnitarias
 		public TowerEnemy(int size)
 		{
 			GenerateTower(size);
+			AssignEnemy();
 		}
 
 		public TowerEnemy()
 		{
 			GenerateTower(GenerateRandomSize());
+			AssignEnemy();
 		}
 
 		void AssignEnemy()

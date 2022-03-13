@@ -10,11 +10,13 @@ namespace AvancePruebasUnitarias
 		public TowerPlayer(int size)
 		{
 			GenerateTower(size);
+			AssignPlayer();
 		}
 
 		public TowerPlayer()
 		{
 			GenerateTower(GenerateRandomSize());
+			AssignPlayer();
 		}
 
 		void AssignPlayer()
