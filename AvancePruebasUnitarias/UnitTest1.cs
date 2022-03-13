@@ -26,7 +26,7 @@ namespace AvancePruebasUnitarias
             {
                 try
                 {
-                    Tower tower = new Tower(/*failCases_LessThanOneLevels[i]*/);
+                    Tower tower = new Tower(failCases_LessThanOneLevels[i]);
                     Assert.Fail();
                 }
                 catch (Exception)
