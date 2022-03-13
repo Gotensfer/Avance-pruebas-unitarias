@@ -22,7 +22,7 @@ namespace AvancePruebasUnitarias
                 Assert.IsTrue(tower.tower.Count >= 1, "La torre tiene menos de 1 nivel al ser generada");
             }
 
-            //Verificar casos de tener torres con menos de 1 nivel
+            //Verificar casos de tener torres con menos de 1 nivel, lo cual debe demostrar la imposibilidad de tener torres con menos de un nivel
             for (int i = 0; i < failCases_SizeLessThanOneLevels.Length; i++)
             {
                 Assert.ThrowsException<Exception>(() => new Tower(failCases_SizeLessThanOneLevels[i]), "Se esperaba que saliera una excepción");
