@@ -193,7 +193,23 @@ namespace AvancePruebasUnitarias
         [TestMethod]
         public void PlayerFacesLastRemaniningEnemy_PlayerWins_ETowerLevelIsAddedToPTower_ETowerDisappears()
         {
-            Assert.IsTrue(0 == 1);
+            int winCase_PlayerValues = 8;
+            int winCase_OpponentValues = 5;
+            int sizeOfPTower = 6;
+            int sizeOfETower = 1;
+            int directionOfAttack = 0;
+            int expected_FinalSizeOfPTower = 7;
+
+            Player player = new Player(winCase_PlayerValues);
+            Enemy enemy = new Enemy(winCase_OpponentValues);
+            Combat combat = new Combat();
+            TowerPlayer pTower = new TowerPlayer(sizeOfPTower);
+            TowerEnemy eTower = new TowerEnemy(sizeOfETower);
+
+            combat.Fight(player, enemy, pTower, eTower, directionOfAttack);
+
+            Assert.IsTrue(pTower.tower.Count == expected_FinalSizeOfPTower, "El tamaño final de la torre del jugador no aumento al valor correcto");
+            Assert.IsNull(eTower.tower, "La torre aun existe, no ha desaparecido");
         }
 
         [TestMethod]
