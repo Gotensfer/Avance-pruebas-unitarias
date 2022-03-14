@@ -59,7 +59,32 @@ namespace AvancePruebasUnitarias
 			Console.WriteLine("Fuerza enemigo despues de luchar  " + obs.str);
 			return result;
 		}
+		
+		public string Fight(Player player, Enemy enemy,TowerPlayer tPlayer, TowerEnemy tEnemy, int attackDir)
+		{
+			
+			Console.WriteLine("Tamaño torre jugador " + tPlayer.tower.Count);
+			Console.WriteLine("Tamaño torre enemigo  " + tEnemy.tower.Count);
+			Console.WriteLine("Fuerza player  " + player.str);
+			Console.WriteLine("Fuerza enemigo  " + enemy.str);
+			if (player.str - enemy.str > 0)
+			{
+				result = "Win";
+				tPlayer.tower.Add(new Levels());
+				tEnemy.tower.RemoveAt(attackDir);
 
+				Console.WriteLine("Tamaño torre jugador despues de luchar  " + tPlayer.tower.Count);
+				Console.WriteLine("Tamaño torre enemigo  despues de luchar  " + tEnemy.tower.Count);
+			}
+			else
+			{
+				result = "Lose";
+			}
+
+			Console.WriteLine("Fuerza player despues de luchar " + player.str);
+			Console.WriteLine("Fuerza enemigo despues de luchar  " + enemy.str);
+			return result;
+		}
 	}
 }
 
