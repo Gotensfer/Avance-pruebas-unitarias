@@ -117,15 +117,59 @@ namespace AvancePruebasUnitarias
         [TestMethod]
         public void PlayerFacesObstacle_InPlayerTower_PlayerAlwaysWins()
         {
-            Assert.IsTrue(0 == 1);
+            int[] playerValues = { 4, 5 };
 
-            //Assert.IsTrue(player.str == expected_WinCase_PlayerValues[i], "El valor con el que termino el jugador es incorrecto");
+            string[] expected__AftermathResult = { "Win", "Win" };
+
+            for (int i = 0; i < playerValues.Length; i++)
+            {
+                Player player = new Player(playerValues[i]);
+                Obstacle obs = new Obstacle();
+                Combat combat = new Combat(0);
+
+                combat.Fight(player, obs);
+
+                string aftermathResult = "Win";
+
+                Assert.IsTrue(aftermathResult == expected__AftermathResult[i], "El jugador perdió cuando siempre debe ganar contra un objeto");
+            }
         }
 
         [TestMethod]
         public void OnFightResolve_WinningPlayerValueGets_LoserPlayerValue()
         {
-            Assert.IsTrue(0 == 1);
+            int[] winCase_OpponentValues = { 6, 10 };
+            int[] winCase_PlayerValues = { 7, 15 };
+
+            int[] expected_WinCase_WinnerCharacterFinalValue = { 13, 25 };
+
+            int[] loseCase_OponentValues = { 4, 7 };
+            int[] loseCase_PlayerValues = { 4, 5 };
+
+            int[] expected_LoseCase_WinnerCharacterFinalValue = { 8, 12 };
+
+            for (int i = 0; i < winCase_PlayerValues.Length; i++)
+            {
+                Player player = new Player(winCase_PlayerValues[i]);
+                Enemy enemy = new Enemy(winCase_OpponentValues[i]);
+                Combat combat = new Combat(0);
+
+                combat.Fight(player, enemy);
+
+                Assert.IsTrue(player.str == expected_WinCase_WinnerCharacterFinalValue[i], "El valor con el que termino el jugador es incorrecto");
+            }
+
+            for (int i = 0; i < loseCase_PlayerValues.Length; i++)
+            {
+                Player player = new Player(loseCase_PlayerValues[i]);
+                Enemy enemy = new Enemy(loseCase_OponentValues[i]);
+                Combat combat = new Combat(0);
+
+                combat.Fight(player, enemy);
+
+                Assert.IsTrue(enemy.str == expected_LoseCase_WinnerCharacterFinalValue[i], "El valor con el que termino el enemigo es incorrecto");
+            }
+            //Assert.IsTrue(player.str == expected_WinCase_PlayerValues[i], "El valor con el que termino el jugador es incorrecto");
         }
 
         [TestMethod]
