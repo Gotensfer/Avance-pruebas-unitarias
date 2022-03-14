@@ -18,11 +18,16 @@ namespace AvancePruebasUnitarias
 			if (str <= 0) throw new Exception("Out of range");
 		}
 
-		public void GenetareStrg(int force)
+		public void GenetareStrg()
         {
+			int force = rnd.Next(1, 15);
 			if (force < 0) throw new Exception("Out of range");
-			else str = rnd.Next(1, force + 1);
+			else str = force;
+		}
 
+		public void GenetareStrg(int force)
+		{
+			str = force;
 		}
 	}
 }
