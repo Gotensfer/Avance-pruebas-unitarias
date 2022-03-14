@@ -110,7 +110,7 @@ namespace AvancePruebasUnitarias
 
                 string aftermathResult = combat.Fight(player.str, enemy.str);
 
-                Assert.IsTrue(aftermathResult == expected_WinCase_AftermathResult[i], "El jugador ganó cuando debio perder por el empate");
+                Assert.IsTrue(aftermathResult == expected_TieCase_AftermathResult[i], "El jugador ganó cuando debio perder por el empate");
             }
         }
 
