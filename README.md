@@ -6,7 +6,7 @@
 
 -Juan Andres Ferrer Dueñas
 
--Juan Jose Rodas (inserte apellido)
+-Juan Jose Rodas
 
 -Jose Daniel Montoya Molina
 
