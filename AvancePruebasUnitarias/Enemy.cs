@@ -3,9 +3,9 @@
 public class Enemy: Character
 {
 	Random rnd = new Random();
-	public Enemy()
+	public Enemy(int force)
 	{
 
-		str = rnd.Next(1, 1000);
+		str = force;
 	}
 }

@@ -26,7 +26,7 @@ namespace AvancePruebasUnitarias
 				obs =rnd.Next(0, 2);
 				if(obs == 0)
                 {
-					tower[i].GenerateEnemy();
+					tower[i].GenerateEnemy(rnd.Next());
 					tower[i].enemy.str += i;
 				}
                 else
