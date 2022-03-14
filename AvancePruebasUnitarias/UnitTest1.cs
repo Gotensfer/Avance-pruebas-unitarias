@@ -165,13 +165,28 @@ namespace AvancePruebasUnitarias
 
                 Assert.IsTrue(enemy.str == expected_LoseCase_WinnerCharacterFinalValue[i], "El valor con el que termino el enemigo es incorrecto");
             }
-            //Assert.IsTrue(player.str == expected_WinCase_PlayerValues[i], "El valor con el que termino el jugador es incorrecto");
         }
 
         [TestMethod]
         public void PlayerFacesEnemy_PlayerWins_PTowerIncreasesOneLevel_ETowerDecreasesOneLevel()
         {
-            Assert.IsTrue(0 == 1);
+            int winCase_PlayerValues = 8;
+            int winCase_OpponentValues = 5;
+            int sizeOfPTower = 5;
+            int sizeOfETower = 7;
+            int expected_FinalSizeOfPTower = 6;
+            int expected_FinalSizeOfETower = 6;
+
+            Player player = new Player(winCase_PlayerValues);
+            Enemy enemy = new Enemy(winCase_OpponentValues);
+            Combat combat = new Combat();
+            TowerPlayer pTower = new TowerPlayer(sizeOfPTower);
+            TowerEnemy eTower = new TowerEnemy(sizeOfETower);
+
+            combat.Fight(player, enemy, pTower, eTower);
+
+            Assert.IsTrue(pTower.tower.Count == expected_FinalSizeOfPTower, "El tamaño final de la torre del jugador no aumento al valor correcto");
+            Assert.IsTrue(eTower.tower.Count == expected_FinalSizeOfETower, "El tamaño final de la torre del enemigo no disminuyo al valor correcto");
         }
 
         [TestMethod]
