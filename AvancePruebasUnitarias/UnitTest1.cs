@@ -174,6 +174,7 @@ namespace AvancePruebasUnitarias
             int winCase_OpponentValues = 5;
             int sizeOfPTower = 5;
             int sizeOfETower = 7;
+            int directionOfAttack = 3;
             int expected_FinalSizeOfPTower = 6;
             int expected_FinalSizeOfETower = 6;
 
@@ -183,7 +184,7 @@ namespace AvancePruebasUnitarias
             TowerPlayer pTower = new TowerPlayer(sizeOfPTower);
             TowerEnemy eTower = new TowerEnemy(sizeOfETower);
 
-            combat.Fight(player, enemy, pTower, eTower);
+            combat.Fight(player, enemy, pTower, eTower, directionOfAttack);
 
             Assert.IsTrue(pTower.tower.Count == expected_FinalSizeOfPTower, "El tamaño final de la torre del jugador no aumento al valor correcto");
             Assert.IsTrue(eTower.tower.Count == expected_FinalSizeOfETower, "El tamaño final de la torre del enemigo no disminuyo al valor correcto");
