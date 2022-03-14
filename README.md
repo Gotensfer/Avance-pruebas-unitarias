@@ -6,7 +6,7 @@
 
 -Juan Andres Ferrer Dueñas
 
--Juan Jose Rodas
+-Juan Jose Rodas Garcia
 
 -Jose Daniel Montoya Molina
 
