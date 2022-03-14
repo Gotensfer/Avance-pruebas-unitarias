@@ -75,13 +75,51 @@ namespace AvancePruebasUnitarias
         [TestMethod]
         public void PlayerFacesEnemy_CharacterWithGreaterValueWins_AndPlayerLoseOnTie()
         {
-            Assert.IsTrue(0 == 1);
+            //Fight
+            //Vectores de prueba
+            int[] winCase_OpponentValues = { 2, 4};
+            int[] winCase_PlayerValues = { 4, 5};
+
+            string[] expected_WinCase_AftermathResult = { "Win", "Win"};
+
+            int[] tieCase_OponentValues = { 3, 6};
+            int[] tieCase_PlayerValues = { 3, 6};
+
+            string[] expected_TieCase_AftermathResult = { "Lose", "Lose" };
+
+            for (int i = 0; i < winCase_PlayerValues.Length; i++)
+            {
+                Player player = new Player(winCase_PlayerValues[i]);
+                Enemy enemy = new Enemy(winCase_OpponentValues[i]);
+                Combat combat = new Combat(0);
+
+                combat.Fight(player, enemy);
+
+                string aftermathResult = "Win";
+
+                Assert.IsTrue(aftermathResult == expected_WinCase_AftermathResult[i], "El jugador perdió cuando debió ganar");            
+            }
+
+            for (int i = 0; i < tieCase_PlayerValues.Length; i++)
+            {
+                Player player = new Player(tieCase_PlayerValues[i]);
+                Enemy enemy = new Enemy(tieCase_OponentValues[i]);
+                Combat combat = new Combat(0);
+
+                combat.Fight(player, enemy);
+
+                string aftermathResult = "Lose";
+
+                Assert.IsTrue(aftermathResult == expected_WinCase_AftermathResult[i], "El jugador ganó cuando debio perder por el empate");
+            }
         }
 
         [TestMethod]
         public void PlayerFacesObstacle_InPlayerTower_PlayerAlwaysWins()
         {
             Assert.IsTrue(0 == 1);
+
+            //Assert.IsTrue(player.str == expected_WinCase_PlayerValues[i], "El valor con el que termino el jugador es incorrecto");
         }
 
         [TestMethod]
