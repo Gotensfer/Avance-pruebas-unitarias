@@ -93,8 +93,6 @@ namespace AvancePruebasUnitarias
                 Enemy enemy = new Enemy(winCase_OpponentValues[i]);
                 Combat combat = new Combat();
 
-                combat.Fight(player.str, enemy.str);
-
                 string aftermathResult = combat.Fight(player.str, enemy.str);
 
                 Assert.IsTrue(aftermathResult == expected_WinCase_AftermathResult[i], "El jugador perdió cuando debió ganar");            
@@ -105,8 +103,6 @@ namespace AvancePruebasUnitarias
                 Player player = new Player(tieCase_PlayerValues[i]);
                 Enemy enemy = new Enemy(tieCase_OponentValues[i]);
                 Combat combat = new Combat();
-
-                combat.Fight(player.str, enemy.str);
 
                 string aftermathResult = combat.Fight(player.str, enemy.str);
 
