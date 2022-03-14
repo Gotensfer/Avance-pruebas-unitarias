@@ -12,9 +12,9 @@ namespace AvancePruebasUnitarias
 
 		}
 
-		public void GenerateEnemy()
+		public void GenerateEnemy(int force)
 		{
-			enemy = new Enemy();
+			enemy = new Enemy(force);
 		}
 
 		public void GeneratePlayer()

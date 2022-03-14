@@ -91,11 +91,11 @@ namespace AvancePruebasUnitarias
             {
                 Player player = new Player(winCase_PlayerValues[i]);
                 Enemy enemy = new Enemy(winCase_OpponentValues[i]);
-                Combat combat = new Combat(0);
+                Combat combat = new Combat();
 
-                combat.Fight(player, enemy);
+                combat.Fight(player.str, enemy.str);
 
-                string aftermathResult = "Win";
+                string aftermathResult = combat.Fight(player.str, enemy.str);
 
                 Assert.IsTrue(aftermathResult == expected_WinCase_AftermathResult[i], "El jugador perdió cuando debió ganar");            
             }
@@ -104,11 +104,11 @@ namespace AvancePruebasUnitarias
             {
                 Player player = new Player(tieCase_PlayerValues[i]);
                 Enemy enemy = new Enemy(tieCase_OponentValues[i]);
-                Combat combat = new Combat(0);
+                Combat combat = new Combat();
 
-                combat.Fight(player, enemy);
+                combat.Fight(player.str, enemy.str);
 
-                string aftermathResult = "Lose";
+                string aftermathResult = combat.Fight(player.str, enemy.str);
 
                 Assert.IsTrue(aftermathResult == expected_WinCase_AftermathResult[i], "El jugador ganó cuando debio perder por el empate");
             }
@@ -125,9 +125,9 @@ namespace AvancePruebasUnitarias
             {
                 Player player = new Player(playerValues[i]);
                 Obstacle obs = new Obstacle();
-                Combat combat = new Combat(0);
+                Combat combat = new Combat();
 
-                combat.Fight(player, obs);
+                combat.Fight(player.str, obs.str);
 
                 string aftermathResult = "Win";
 
@@ -152,9 +152,9 @@ namespace AvancePruebasUnitarias
             {
                 Player player = new Player(winCase_PlayerValues[i]);
                 Enemy enemy = new Enemy(winCase_OpponentValues[i]);
-                Combat combat = new Combat(0);
+                Combat combat = new Combat();
 
-                combat.Fight(player, enemy);
+                combat.Fight(player.str, enemy.str);
 
                 Assert.IsTrue(player.str == expected_WinCase_WinnerCharacterFinalValue[i], "El valor con el que termino el jugador es incorrecto");
             }
@@ -163,9 +163,9 @@ namespace AvancePruebasUnitarias
             {
                 Player player = new Player(loseCase_PlayerValues[i]);
                 Enemy enemy = new Enemy(loseCase_OponentValues[i]);
-                Combat combat = new Combat(0);
+                Combat combat = new Combat();
 
-                combat.Fight(player, enemy);
+                combat.Fight(player.str, enemy.str);
 
                 Assert.IsTrue(enemy.str == expected_LoseCase_WinnerCharacterFinalValue[i], "El valor con el que termino el enemigo es incorrecto");
             }
