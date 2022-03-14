@@ -93,7 +93,7 @@ namespace AvancePruebasUnitarias
                 Enemy enemy = new Enemy(winCase_OpponentValues[i]);
                 Combat combat = new Combat();
 
-                string aftermathResult = combat.Fight(player.str, enemy.str);
+                string aftermathResult = combat.Fight(player, enemy);
 
                 Assert.IsTrue(aftermathResult == expected_WinCase_AftermathResult[i], "El jugador perdió cuando debió ganar");            
             }
@@ -104,7 +104,7 @@ namespace AvancePruebasUnitarias
                 Enemy enemy = new Enemy(tieCase_OponentValues[i]);
                 Combat combat = new Combat();
 
-                string aftermathResult = combat.Fight(player.str, enemy.str);
+                string aftermathResult = combat.Fight(player, enemy);
 
                 Assert.IsTrue(aftermathResult == expected_TieCase_AftermathResult[i], "El jugador ganó cuando debio perder por el empate");
             }
@@ -123,7 +123,7 @@ namespace AvancePruebasUnitarias
                 Obstacle obs = new Obstacle();
                 Combat combat = new Combat();
 
-                combat.Fight(player.str, obs.str);
+                combat.Fight(player, obs);
 
                 string aftermathResult = "Win";
 
@@ -150,7 +150,7 @@ namespace AvancePruebasUnitarias
                 Enemy enemy = new Enemy(winCase_OpponentValues[i]);
                 Combat combat = new Combat();
 
-                combat.Fight(player.str, enemy.str);
+                combat.Fight(player, enemy);
 
                 Assert.IsTrue(player.str == expected_WinCase_WinnerCharacterFinalValue[i], "El valor con el que termino el jugador es incorrecto");
             }
@@ -161,7 +161,7 @@ namespace AvancePruebasUnitarias
                 Enemy enemy = new Enemy(loseCase_OponentValues[i]);
                 Combat combat = new Combat();
 
-                combat.Fight(player.str, enemy.str);
+                combat.Fight(player, enemy);
 
                 Assert.IsTrue(enemy.str == expected_LoseCase_WinnerCharacterFinalValue[i], "El valor con el que termino el enemigo es incorrecto");
             }
