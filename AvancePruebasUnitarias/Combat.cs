@@ -5,37 +5,25 @@ namespace AvancePruebasUnitarias
 	public class Combat
 	{
 		Player player = new Player();
-		TowerEnemy enemy = new TowerEnemy();
-		int result = 0, playerPosition = 0;
-		TowerPlayer tp = new TowerPlayer();
+		Enemy enemy = new Enemy();
+		string result;
+		
 		
 
 		public Combat(int attackDir)						//attackDir es la posición de la torre a la cual se va a atacar
 		{
-			playerPosition = tp.positionPlayer;
-			player = tp.tower[playerPosition].player;
 
-			if (result <= 0) Lose();
-			else Win(attackDir);
 		}
 
-		int Fight (int strgPlayer, int strgEnemy, int attackDir)
+		public string Fight (int strgPlayer, int strgEnemy)
         {
-
-			result = player.str - enemy.tower[attackDir].enemy.str;
+			if (strgPlayer - strgEnemy <= 0) result = "Lose";
+			else result = "Win";
 
 			return result;
         }
 
-		void Lose()
-        {
-			player.life--;
-        }
 
-		void Win(int attackDir)
-        {
-			player.str += enemy.tower[attackDir].enemy.str;
-		}
 	}
 }
 
