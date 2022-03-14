@@ -59,9 +59,10 @@ namespace AvancePruebasUnitarias
 			Console.WriteLine("Fuerza enemigo despues de luchar  " + obs.str);
 			return result;
 		}
-
+		
 		public string Fight(Player player, Enemy enemy,TowerPlayer tPlayer, TowerEnemy tEnemy, int attackDir)
 		{
+			
 			Console.WriteLine("Tamaño torre jugador " + tPlayer.tower.Count);
 			Console.WriteLine("Tamaño torre enemigo  " + tEnemy.tower.Count);
 			Console.WriteLine("Fuerza player  " + player.str);
