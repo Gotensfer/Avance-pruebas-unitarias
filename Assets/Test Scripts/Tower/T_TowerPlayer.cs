@@ -2,19 +2,19 @@
 
 namespace AvancePruebasUnitarias
 {
-	public class TowerPlayer : Tower
+	public class T_TowerPlayer : T_Tower
 	{
 		public int positionPlayer;
 		Random rnd = new Random();
 
-		public TowerPlayer(int size)
+		public T_TowerPlayer(int size)
 		{
 
 			GenerateTower(size);
 			AssignPlayer();
 		}
 
-		public TowerPlayer()
+		public T_TowerPlayer()
 		{
 			GenerateTower(GenerateRandomSize());
 			AssignPlayer();

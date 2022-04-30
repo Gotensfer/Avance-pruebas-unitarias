@@ -2,15 +2,15 @@
 
 namespace AvancePruebasUnitarias
 {
-	public class Obstacle : Character
+	public class T_Obstacle : T_Character
 	{
 		Random rnd = new Random();
-		public Obstacle(int force)
+		public T_Obstacle(int force)
 		{
 			if (force <= 0) throw new Exception("Out of range");
 		}
 
-		public Obstacle()
+		public T_Obstacle()
 		{
 			GenetareStrg(GenerateRandomSize());
 			if (str <= 0) throw new Exception("Out of range");

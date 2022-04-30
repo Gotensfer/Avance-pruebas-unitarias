@@ -1,11 +1,17 @@
-﻿using System;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Enemy: Character
+
+public enum typeEnemy
 {
-	Random rnd = new Random();
-	public Enemy(int force)
-	{
-
-		str = force;
-	}
+    Normal,
+    Muerto,
+    Jefe
 }
+
+class Enemy : Character
+{
+
+}
+

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace AvancePruebasUnitarias
 {
-	public class Tower
+	public class T_Tower
 	{
 		public List<Levels> tower = new List<Levels>();
 		Random rnd = new Random();		
 
-		public Tower()
+		public T_Tower()
 		{
 			GenerateTower(GenerateRandomSize());
 		}

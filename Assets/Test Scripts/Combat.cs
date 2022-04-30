@@ -4,8 +4,8 @@ namespace AvancePruebasUnitarias
 {
 	public class Combat
 	{
-		Player player = new Player();
-		Enemy enemy = new Enemy(0);
+		T_Player player = new T_Player();
+		T_Enemy enemy = new T_Enemy(0);
 		string result;
 		
 		
@@ -15,7 +15,7 @@ namespace AvancePruebasUnitarias
 
 		}
 
-		public string Fight (Player player, Enemy enemy)
+		public string Fight (T_Player player, T_Enemy enemy)
         {
 			int final;
 			Console.WriteLine("Fuerza player  " + player.str);
@@ -37,7 +37,7 @@ namespace AvancePruebasUnitarias
 			Console.WriteLine("Fuerza enemigo despues de luchar  " + enemy.str);
 			return result;
 		}
-		public string Fight(Player player, Obstacle obs)
+		public string Fight(T_Player player, T_Obstacle obs)
 		{
 			int final;
 			Console.WriteLine("Fuerza player  " + player.str);
@@ -60,7 +60,7 @@ namespace AvancePruebasUnitarias
 			return result;
 		}
 		
-		public string Fight(Player player, Enemy enemy,TowerPlayer tPlayer, TowerEnemy tEnemy, int attackDir)
+		public string Fight(T_Player player, T_Enemy enemy,T_TowerPlayer tPlayer, T_TowerEnemy tEnemy, int attackDir)
 		{
 			
 			Console.WriteLine("Tamaño torre jugador " + tPlayer.tower.Count);

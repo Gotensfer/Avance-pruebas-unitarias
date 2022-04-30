@@ -2,18 +2,18 @@
 
 namespace AvancePruebasUnitarias
 {
-	public class TowerEnemy : Tower
+	public class T_TowerEnemy : T_Tower
 	{
 		Random rnd = new Random();
 		int obs;
 
-		public TowerEnemy(int size)
+		public T_TowerEnemy(int size)
 		{
 			GenerateTower(size);
 			AssignEnemy();
 		}
 
-		public TowerEnemy()
+		public T_TowerEnemy()
 		{
 			GenerateTower(GenerateRandomSize());
 			AssignEnemy();

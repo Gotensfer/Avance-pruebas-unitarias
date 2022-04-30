@@ -4,9 +4,9 @@ namespace AvancePruebasUnitarias
 {
 	public class Levels
 	{
-		public Enemy enemy;
-		public Player player;
-		public Obstacle obs;
+		public T_Enemy enemy;
+		public T_Player player;
+		public T_Obstacle obs;
 		public Levels()
 		{
 
@@ -14,18 +14,18 @@ namespace AvancePruebasUnitarias
 
 		public void GenerateEnemy(int force)
 		{
-			enemy = new Enemy(force);
+			enemy = new T_Enemy(force);
 		}
 
 		public void GeneratePlayer()
 		{
-			player = new Player();
+			player = new T_Player();
 			if (player.str < 1) throw new Exception("Out of range");
 		}
 
 		public void GenerateObstacle()
         {
-			obs = new Obstacle();
+			obs = new T_Obstacle();
         }
 	}
 }
