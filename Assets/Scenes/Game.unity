@@ -1684,6 +1684,7 @@ MonoBehaviour:
   - {fileID: 230964186}
   - {fileID: 841282321}
   - {fileID: 1233461823}
+  deltaDeDistancia: 0.5
 --- !u!1 &466090145
 GameObject:
   m_ObjectHideFlags: 0
@@ -6493,6 +6494,7 @@ MonoBehaviour:
   levels:
   - {fileID: 860308281}
   - {fileID: 1248175507}
+  deltaDeDistancia: 0.5
 --- !u!1 &1976050610
 GameObject:
   m_ObjectHideFlags: 0
