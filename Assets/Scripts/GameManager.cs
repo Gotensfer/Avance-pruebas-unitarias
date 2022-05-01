@@ -15,6 +15,13 @@ namespace CacoTorres
 
         public GameObject WinPanel;
         public GameObject LosePanel;
+
+        [Header("kills")]
+        public GameObject Double_Kill;
+        public GameObject Triple_Kill;
+        public GameObject Cuadra_Kill;
+        public GameObject Penta_Kill;
+
         private readonly List<Observer> observers = new List<Observer>();
         public int enemyCount = 6;
         [SerializeField] ObserverKills observer;
