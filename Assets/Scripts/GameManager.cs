@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace CacoTorres
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : MonoBehaviour, Subject
     {
         public static GameManager instance; // Singleton instance
         public GameObject playerObject;
@@ -15,13 +15,13 @@ namespace CacoTorres
 
         public GameObject WinPanel;
         public GameObject LosePanel;
-
+        private readonly List<Observer> observers = new List<Observer>();
         public int enemyCount = 6;
-
+        [SerializeField] ObserverKills observer;
         private void Awake()
         {
             // Singleton ---> ?
-
+            Subscribe(observer);
             instance = this;
 
             // Singleton < ---
@@ -39,7 +39,7 @@ namespace CacoTorres
                 player.UpdateStrenghtDisplay();
 
                 enemyCount -= 1;
-
+                Notify();
                 if (enemyCount <= 0)
                 {
                     WinPanel.SetActive(true);
@@ -81,6 +81,26 @@ namespace CacoTorres
                 Combat(playerObject.GetComponent<Player>(), levelDestination.storedEntity as Obstacle);
             }
         }
+
+        #region Observer
+        public void Subscribe(Observer _observer)
+        {
+            observers.Add(_observer);
+        }
+
+        public void Unsubscribe(Observer _observer)
+        {
+            observers.Remove(_observer);
+        }
+
+        public void Notify()
+        {
+            foreach(var _observer in observers)
+            {
+                _observer.Updated(this);
+            }
+        }
+        #endregion
 
         void RestartGame()
         {
