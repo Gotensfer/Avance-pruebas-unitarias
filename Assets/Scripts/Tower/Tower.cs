@@ -42,8 +42,12 @@ namespace CacoTorres
             }
         }
 
+        [SerializeField] float deltaDeDistancia;
+
         public void RemoveNear_EmptyEnemyLevels(Level pivot)
         {
+            
+
             if (Equals(gameObject.name, "Enemy Tower"))
             {
                 for (int i = pivot.positionIndex; i < pivot.positionIndex + 2 && i < levels.Count; i++)
@@ -58,7 +62,7 @@ namespace CacoTorres
                         // Agregar a la torre del jugador un nivel
                         Vector3 pivotPosition = GameManager.instance.playerTower.levels[GameManager.instance.playerTower.levels.Count - 1].transform.localPosition;
                         GameObject newPlayerLevel = Instantiate(GameManager.instance.playerTowerLevel, Vector3.zero, Quaternion.identity, GameManager.instance.playerTower.transform);
-                        newPlayerLevel.transform.localPosition = new Vector3(0, pivotPosition.y + 0.5f, 0);
+                        newPlayerLevel.transform.localPosition = new Vector3(0, pivotPosition.y + deltaDeDistancia, 0);
                         GameManager.instance.playerTower.levels.Add(newPlayerLevel.GetComponent<Level>());
                     }
                 }
@@ -75,7 +79,7 @@ namespace CacoTorres
                         // Agregar a la torre del jugador un nivel
                         Vector3 pivotPosition = GameManager.instance.playerTower.levels[GameManager.instance.playerTower.levels.Count - 1].transform.localPosition;
                         GameObject newPlayerLevel = Instantiate(GameManager.instance.playerTowerLevel, Vector3.zero, Quaternion.identity, GameManager.instance.playerTower.transform);
-                        newPlayerLevel.transform.localPosition = new Vector3( 0, pivotPosition.y + 0.5f, 0);
+                        newPlayerLevel.transform.localPosition = new Vector3( 0, pivotPosition.y + deltaDeDistancia, 0);
                         GameManager.instance.playerTower.levels.Add(newPlayerLevel.GetComponent<Level>());
                     }
                 }
@@ -91,7 +95,7 @@ namespace CacoTorres
             {
                 if (i > pivot)
                 {
-                    levels[i].gameObject.transform.Translate(new Vector3(0, -0.5f, 0), Space.Self);
+                    levels[i].gameObject.transform.Translate(new Vector3(0, -deltaDeDistancia, 0), Space.Self);
                     levels[i].positionIndex -= 1;
                 }          
             }
