@@ -6,8 +6,6 @@
 
 -Juan Andres Ferrer Dueñas
 
--Juan Jose Rodas Garcia
-
 -Jose Daniel Montoya Molina
 
 -Camilo Correa Rojas
