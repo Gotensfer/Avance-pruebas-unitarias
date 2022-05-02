@@ -12,7 +12,7 @@
 
 ### Dificultades
 
-no se presentaron dificultades al desarrollo del proyecto.
+No se presentaron dificultades al desarrollo del proyecto.
 Se tomaron en cuenta las pruebas unitarias de C# para la implementación de Unity
 
 Un "ex-compañero" no aporto absolutamente nada en el proyecto durante el semestre. 
