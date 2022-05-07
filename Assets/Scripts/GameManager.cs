@@ -63,7 +63,6 @@ namespace CacoTorres
                 Notify();
 
                 opponent.UpdateStrenghtDisplay();
-                print(playerObject == null);
                 
                 Invoke(nameof(RestartGame), 2);
             }

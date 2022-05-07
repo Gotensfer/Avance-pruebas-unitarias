@@ -4,13 +4,6 @@ using UnityEngine;
 
 namespace CacoTorres
 {
-    public enum EnemyType
-    {
-        Normal,
-        Muerto,
-        Jefe
-    }
-
     public class Enemy : Entity
     {
         private void Awake()
