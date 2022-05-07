@@ -19,7 +19,7 @@ namespace CacoTorres
 
         public override void CombatDefeat()
         {
-            
+            GameManager.instance.isPlayerAlive = false;
             Destroy(this.gameObject);
         }
     }

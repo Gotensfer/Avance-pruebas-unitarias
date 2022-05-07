@@ -12,7 +12,7 @@ namespace CacoTorres
         public Tower playerTower;
         public Tower enemyTower;
         public GameObject playerTowerLevel;
-
+        public bool isPlayerAlive = true;
         public GameObject WinPanel;
         public GameObject LosePanel;
 
@@ -22,13 +22,15 @@ namespace CacoTorres
         public GameObject Cuadra_Kill;
         public GameObject Penta_Kill;
 
-        private readonly List<Observer> observers = new List<Observer>();
+        [SerializeField] List<Observer> observers = new List<Observer>();
         public int enemyCount = 6;
         [SerializeField] ObserverKills observer;
+        [SerializeField] observerwinlose Observerwinlose;
         private void Awake()
         {
             // Singleton ---> ?
             Subscribe(observer);
+            Subscribe(Observerwinlose);
             instance = this;
 
             // Singleton < ---
@@ -49,18 +51,20 @@ namespace CacoTorres
                 Notify();
                 if (enemyCount <= 0)
                 {
-                    WinPanel.SetActive(true);
+                    Notify();
                     Invoke(nameof(RestartGame), 2);
                 }
             }
             else
             {
                 opponent.CombatVictory(player);
+                
                 player.CombatDefeat();
+                Notify();
 
                 opponent.UpdateStrenghtDisplay();
-
-                LosePanel.SetActive(true);
+                print(playerObject == null);
+                
                 Invoke(nameof(RestartGame), 2);
             }
         }
