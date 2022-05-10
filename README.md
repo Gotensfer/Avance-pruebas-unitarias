@@ -10,12 +10,14 @@
 
 -Camilo Correa Rojas
 
+-Juan José Rodas Garcia
+
 ### Dificultades
 
 No se presentaron dificultades al desarrollo del proyecto.
 Se tomaron en cuenta las pruebas unitarias de C# para la implementación de Unity
 
-Un "ex-compañero" no aporto absolutamente nada en el proyecto durante el semestre. 
+Se resolvieron los conflictos internos del equipo y se llegó a una solución satisfactoria
 
 ### Instrucciones de uso
 
